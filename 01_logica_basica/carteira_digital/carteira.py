@@ -84,6 +84,10 @@ def main():
         mostrar_menu()
         opcao = input("\nEscolha uma opção (1-4): ")
 
+        if opcao.strip() == "":
+            print("Erro, campo vazio.")
+            continue
+
         if opcao == "1":
             ver_saldo(saldo)
 
@@ -99,6 +103,7 @@ def main():
 
         else:
             print("\nErro, opção inválida.\n")
+
 
 
 if __name__ == "__main__":
